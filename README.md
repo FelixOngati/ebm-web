@@ -1,4 +1,4 @@
-#AI on EMR: Data Mining for Evidence Based Medicine Project
+#AI on EMR: Data Mining for Evidence Based Medicine Project :sparkles:
 ##Concept Note
 
 ##Background

@@ -1,25 +1,25 @@
-AI on EMR: Data Mining for Evidence Based Medicine Project
-Concept Note
+#AI on EMR: Data Mining for Evidence Based Medicine Project
+##Concept Note
 
-Background
+##Background
 In Kenya, many urban hospitals and well equipped rural hospitals use EMRs to record patients data. This data is largely used for basic record keeping and treatment tracking. Advanced data analysis and artificial intelligence techniques such as data mining, can be applied to make more meaningful use of this data. Information technology, in general, can help improve human health and longevity. To achieve this goal innovative and intelligent software can be deployed in order to improve medical research, disease prevention, and clinical decision making. 
 Electronic health records save lives by collecting patient data in one place. Artificial intelligence takes it a step further by generating useful insights that improve clinical decision making process. A collective intelligence system applied on clinical decisions can face clinicians against their usual endogamic way of seeing their profession.
 The spread of electronic patient records, with their computer-readable entries, is opening new possibilities for medical data mining. Instead of being limited to carefully planned studies on volunteers, scientists can increasingly carry out research virtually by sifting through troves of data collected from the unplanned experiments of real life, as preserved in medical records from scores of hospitals
-Problem
+##Problem
 The information a physician needs to optimize treatment of a patient is always unavailable, yet health informatics industry in Kenya, through EMRs, accumulates large volumes of data that is not put into extensive use apart from basic record keeping, patients treatment tracking and monitoring. This data can be put into a more meaningful use.
-Solution
+##Solution
 Combining knowledge from Artificial Intelligence, databases and statistics, this data can be de-identified, explored and modeled in such a way as to discover unknown patterns or relationships which provide a clear and useful insights to health care workers, researchers, clinical decision makers and data analysts.
-Goals and Objectives
+##Goals and Objectives
 The goal of this project is improve clinical decision making process by developing a web based application that can easily be integrated with existing EMRs to mine EMR data and use artificial intelligence techniques to create insights that improve quality of decisions made by physicians and healthcare workers in general and also serve as a platform for health informatics researchers to share knowledge. 
- Research Objectives
+###Research Objectives
 Research into the application of knowledge based systems in clinical decision making and the concept and working of evidence based medicine.
 Research into the use of collective intelligence algorithms in clinical data mining.
 Research into the application of association rules in medical field.
- System Development Objectives
+ ###System Development Objectives
 To Develop an AI based Clinical Decision Support system that is both Evidence based and Patient Centric, augmented with machine learning techniques to enhance existing patient datasets.
 To develop a platform that can be used by health informatics researchers to enhance their research by availing deidentified clinical data and enable researchers share their findings.
 
-Benefits
+##Benefits
 Improved clinical decision making thus optimal treatment
 Support for evidence based practice
 Knowledge development through research
