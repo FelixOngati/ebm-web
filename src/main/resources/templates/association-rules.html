@@ -284,12 +284,14 @@
                         <h4 class="header">Association Rules</h4>
                         <div class="row">
 
-                            <div class="col s12 m8 l9">
+                            <div class="col s12 m8 l9" th:if="${not #lists.isEmpty(rules)}">
                                 <table id="data-table-simple" class="responsive-table display" cellspacing="0">
                                     <thead>
                                     <tr>
                                         <th>Rule</th>
                                         <th>Confidence</th>
+                                        <th>Support</th>
+                                        <th>Rating</th>
                                     </tr>
                                     </thead>
 
@@ -297,101 +299,17 @@
                                     <tr>
                                         <th>Rule</th>
                                         <th>Confidence</th>
+                                        <th>Support</th>
+                                        <th>Rating</th>
                                     </tr>
                                     </tfoot>
 
                                     <tbody>
-                                    <tr>
-                                        <td>cbc_eosinophils=normal cbc_eosinophils 372 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity metabolic_alk_phos=normal metabolic_alk_phos</td>
-                                        <td>conf:(0.95)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_specific_gravity=low urinalysis_specific_gravity cbc_eosinophils=normal cbc_eosinophils 372 ==> metabolic_alk_phos=normal metabolic_alk_phos</td>
-                                        <td>conf:(0.95)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>cbc_eosinophils=normal cbc_eosinophils 372 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_specific_gravity=low urinalysis_specific_gravity 372 ==> cbc_eosinophils=normal cbc_eosinophils 372</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_ph=normal urinalysis_ph 363 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity 363</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_ph=normal urinalysis_ph 363 ==> cbc_eosinophils=normal cbc_eosinophils 363</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_ph=normal urinalysis_ph cbc_eosinophils=normal cbc_eosinophils 363 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity 363</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_ph=normal urinalysis_ph urinalysis_specific_gravity=low urinalysis_specific_gravity 363 ==> cbc_eosinophils=normal cbc_eosinophils 363 </td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_ph=normal urinalysis_ph 363 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity cbc_eosinophils=normal cbc_eosinophils 363</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>metabolic_alk_phos=normal metabolic_alk_phos 355 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity 355</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>cbc_eosinophils=normal cbc_eosinophils metabolic_alk_phos=normal metabolic_alk_phos 355 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity 355</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_specific_gravity=low urinalysis_specific_gravity metabolic_alk_phos=normal metabolic_alk_phos 355 ==> cbc_eosinophils=normal cbc_eosinophils 355</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>metabolic_alk_phos=normal metabolic_alk_phos 355 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity cbc_eosinophils=normal cbc_eosinophils 355</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>cbc_lymphocytes=normal cbc_lymphocytes 347 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity 347</td>
-                                        <td>conf:(1)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_specific_gravity=low urinalysis_specific_gravity metabolic_alk_phos=normal metabolic_alk_phos 355 ==> urinalysis_ph=normal urinalysis_ph 347</td>
-                                        <td>conf:(0.98)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>cbc_eosinophils=normal cbc_eosinophils 372 ==> urinalysis_ph=normal urinalysis_ph urinalysis_specific_gravity=low urinalysis_specific_gravity 363</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>cbc_eosinophils=normal cbc_eosinophils 372 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity metabolic_alk_phos=normal metabolic_alk_phos 355</td>
-                                        <td>conf:(0.95)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_specific_gravity=low urinalysis_specific_gravity cbc_eosinophils=normal cbc_eosinophils 372 ==> metabolic_alk_phos=normal metabolic_alk_phos 355</td>
-                                        <td>conf:(0.95)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>cbc_eosinophils=normal cbc_eosinophils 372 ==> metabolic_alk_phos=normal metabolic_alk_phos 355</td>
-                                        <td>conf:(0.95)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_ph=normal urinalysis_ph 363 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity cbc_eosinophils=normal cbc_eosinophils metabolic_alk_phos=normal metabolic_alk_phos 347</td>
-                                        <td>conf:(0.96)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_ph=normal urinalysis_ph 363 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity metabolic_alk_phos=normal metabolic_alk_phos 347    conf:(0.96)</td>
-                                        <td>conf:(0.96)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>urinalysis_ph=normal urinalysis_ph urinalysis_specific_gravity=low urinalysis_specific_gravity 363 ==> metabolic_alk_phos=normal metabolic_alk_phos 347</td>
-                                        <td>conf:(0.96)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>cbc_lymphocytes=normal cbc_lymphocytes 347 ==> urinalysis_specific_gravity=low urinalysis_specific_gravity cbc_eosinophils=normal cbc_eosinophils metabolic_alk_phos=normal metabolic_alk_phos 332</td>
-                                        <td>conf:(0.96)</td>
+                                    <tr th:each="rule : ${rules}">
+                                        <td th:text="${rule.rule}">rule</td>
+                                        <td th:text="${rule.confidence}">confidence</td>
+                                        <td th:text="${rule.support}">support</td>
+                                        <td th:text="${rule.rating}">rating</td>
                                     </tr>
                                     </tbody>
                                 </table>

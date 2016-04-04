@@ -24,7 +24,7 @@ public class EbmWebController {
 
     @RequestMapping("/")
     public String index(@RequestParam(value = "name", required = false, defaultValue = "World") String name, Model model){
-        model.addAttribute("name", name);
+
         return "index";
     }
 
@@ -34,7 +34,8 @@ public class EbmWebController {
     }
 
     @RequestMapping("/associationrules")
-    public String associationrules(){
+    public String associationrules(Model model){
+        model.addAttribute("rules",associationRulesService.findAll() );
         return "association-rules";
     }
 
