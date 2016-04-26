@@ -365,7 +365,7 @@
                                         <td th:text="${rule.support}">support</td>
                                         <td th:text="${rule.rating}">rating</td>
                                         <td>
-                                            <form class="rating">
+                                            <form class="rating" th:id="${rule.ruleId}">
                                                 <input type="radio" th:id="${rule.ruleId + 'star5'}" name="rating" value="5" /><label th:for="${rule.ruleId + 'star5'}" title="Rocks!">5 stars</label>
                                                 <input type="radio" th:id="${rule.ruleId + 'star4'}" name="rating" value="4" /><label th:for="${rule.ruleId + 'star4'}" title="Pretty good">4 stars</label>
                                                 <input type="radio" th:id="${rule.ruleId + 'star3'}" name="rating" value="3" /><label th:for="${rule.ruleId + 'star3'}" title="Meh">3 stars</label>
