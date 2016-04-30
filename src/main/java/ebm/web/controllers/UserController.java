@@ -1,12 +1,13 @@
 package ebm.web.controllers;
 
 import ebm.web.model.persistence.UserCreateForm;
-import ebm.web.model.services.UserService;
+import ebm.web.model.services.user.UserService;
 import ebm.web.model.validator.UserCreateFormValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -43,6 +44,7 @@ public class UserController {
         binder.addValidators(userCreateFormValidator);
     }
 
+    @PreAuthorize("@currentUserServiceImpl.canAccessUser(principal, #id)")
     @RequestMapping("user/{id}")
     public String getUserPage(Model model, @PathVariable final Long id){
         LOGGER.debug("Getting user page for user={}",id);
@@ -50,12 +52,14 @@ public class UserController {
         return "user";
     }
 
+//    @PreAuthorize("hasAuthority('ADMIN')")
     @RequestMapping(value = "user/create", method = RequestMethod.GET)
     public ModelAndView getUserCreatePage(){
         LOGGER.debug("Getting user create form");
         return new ModelAndView("user_create", "form", new UserCreateForm());
     }
 
+//    @PreAuthorize("hasAuthority('ADMIN')")
     @RequestMapping(value = "user/create", method = RequestMethod.POST)
     public String handleUserCreateForm(@Valid @ModelAttribute("form") UserCreateForm form, BindingResult bindingResult){
         LOGGER.debug("Processing user create form={}, bindingResult={}", form, bindingResult);

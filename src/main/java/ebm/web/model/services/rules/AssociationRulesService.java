@@ -1,4 +1,4 @@
-package ebm.web.model.services;
+package ebm.web.model.services.rules;
 
 import ebm.web.model.persistence.TblAssociationRules;
 import org.springframework.stereotype.Component;

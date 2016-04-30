@@ -1,7 +1,8 @@
-package ebm.web.model.services;
+package ebm.web.model.services.rules;
 
 import ebm.web.model.persistence.TblAssociationRules;
 import ebm.web.model.repositories.AssociationRulesRepository;
+import ebm.web.model.services.rules.AssociationRulesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

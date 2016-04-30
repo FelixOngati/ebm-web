@@ -1,4 +1,4 @@
-package ebm.web.model.services;
+package ebm.web.model.services.user;
 
 import ebm.web.model.persistence.TblUser;
 import ebm.web.model.persistence.UserCreateForm;

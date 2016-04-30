@@ -1,7 +1,7 @@
 package ebm.web.model.validator;
 
 import ebm.web.model.persistence.UserCreateForm;
-import ebm.web.model.services.UserService;
+import ebm.web.model.services.user.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

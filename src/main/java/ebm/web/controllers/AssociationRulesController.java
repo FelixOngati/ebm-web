@@ -1,7 +1,7 @@
 package ebm.web.controllers;
 
 import ebm.web.model.persistence.TblAssociationRules;
-import ebm.web.model.services.AssociationRulesService;
+import ebm.web.model.services.rules.AssociationRulesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
