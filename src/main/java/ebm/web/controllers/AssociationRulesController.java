@@ -50,6 +50,11 @@ public class AssociationRulesController {
         return "fuzzylabs-data";
     }
 
+    @RequestMapping("/dashboard")
+    public String dashboard(Model model){
+        return "dashboard";
+    }
+
     @RequestMapping("/associationrules")
     public String associationrules(Model model){
         model.addAttribute("rules",associationRulesService.findAll() );

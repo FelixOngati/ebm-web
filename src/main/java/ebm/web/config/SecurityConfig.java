@@ -32,6 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .antMatchers("/rulesongender").permitAll()
                 .antMatchers("/rulesonregion").permitAll()
                 .antMatchers("/rulesonmaritalstatus").permitAll()
+                .antMatchers("/dashboard").permitAll()
                 .anyRequest().fullyAuthenticated()
                 .and()
                 .formLogin()

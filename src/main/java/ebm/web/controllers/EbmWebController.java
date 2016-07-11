@@ -17,5 +17,9 @@ public class EbmWebController {
 
         return "index";
     }
+//    @RequestMapping("/dashboard")
+//    public String regionrrules(Model model){
+//        return "dashboard";
+//    }
 
 }
